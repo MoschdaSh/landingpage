@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+  /* Näherungen – werden bei Bedarf durch exakte HEX ersetzt */
+  --brand: #B99668;         /* warmes Beige/Gold */
+  --brand-contrast: #ffffff;
+  --ink: #111318;           /* Haupttext */
+  --ink-muted: #6B7280;     /* Sekundärtext */
+  --paper: #FAF7F0;         /* warmes Off‑White */
+  --paper-card: #ffffff;    /* Kartenhintergrund */
+  --paper-line: #E6E7EB;    /* Rahmen/Trenner */
+  --paper-dark: #222222;    /* dunkle Sektionen */
+
+  --font-body: var(--font-sen);
+  --font-heading: var(--font-sen);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme inline{
+  --color-brand: var(--brand);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-paper: var(--paper);
+  --color-paper-card: var(--paper-card);
+  --color-paper-line: var(--paper-line);
+  --color-paper-dark: var(--paper-dark);
+
+  --font-body: var(--font-body);
+  --font-heading: var(--font-heading);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html, body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-weight: 400; }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+h1, h2, .font-heading { font-family: var(--font-heading); font-weight: 700; }
+
+/* Utility styles for buttons/cards/badges */
+.btn{ @apply w-full relative inline-flex items-center justify-center text-center font-normal rounded-xl transition focus:outline-none focus:ring-2 focus:ring-brand/30 pl-14 pr-5 py-4 min-h-14 whitespace-nowrap; }
+.btn-primary{ background: var(--brand); color: var(--brand-contrast); }
+.btn-primary:hover{ filter: brightness(0.95); }
+.btn-outline{ background:#fff; color: var(--brand); border:1px solid var(--brand); }
+.btn-outline:hover{ background: color-mix(in oklab, var(--brand) 6%, white); }
+
+.card{ background: var(--paper-card); border:1px solid var(--paper-line); border-radius:16px; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+.badge{ display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:#fff; border:1px solid var(--paper-line); color: var(--ink-muted); font-size: 12px; }
