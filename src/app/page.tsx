@@ -52,9 +52,8 @@ export default function Home() {
 
         <footer className="mt-6 text-center text-sm text-ink-muted">
           <div className="flex justify-center gap-4">
-            <a className="text-brand hover:underline" href="mailto:mail@domain.de">E‑Mail</a>
-            <a className="text-brand hover:underline" href="https://www.sham-estate.com" target="_blank" rel="noopener">Website</a>
-            <a className="text-brand hover:underline" href="#">Impressum</a>
+            <a className="text-brand hover:underline" href="/impressum">Impressum</a>
+            <a className="text-brand hover:underline" href="/datenschutz">Datenschutz</a>
           </div>
       </footer>
       </section>
