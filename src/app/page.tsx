@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { LinkButton } from "@/components/LinkButton";
-import { Badge } from "@/components/Badge";
 
 export default function Home() {
   return (
@@ -8,12 +7,12 @@ export default function Home() {
       <section className="max-w-[700px] mx-auto px-6 py-8 sm:py-12">
         {/* Unified Linktree-style container */}
         <div className="card p-6 sm:p-8 max-w-[620px] mx-auto">
-          <div className="text-center">
-            <div className="mx-auto mb-4 h-24 w-24 overflow-hidden rounded-full bg-black flex items-center justify-center">
-              <Image src="/vercel.svg" alt="Logo" width={80} height={80} className="invert" />
+            <div className="text-center">
+            <div className="mx-auto mb-4 h-24 w-24 overflow-hidden rounded-full">
+              <Image src="/images/profile-picture.jpeg" alt="Profilbild" width={96} height={96} className="h-full w-full object-cover" />
             </div>
-            <h1 className="font-heading text-3xl sm:text-4xl font-semibold tracking-tight">Sham Estate</h1>
-            <p className="mt-2 text-ink-muted">Real Estate Beratung & Verkauf – schnell, transparent, persönlich.</p>
+            <h1 className="font-heading text-4xl sm:text-5xl font-semibold tracking-tight">Sham Estate</h1>
+            <p className="mt-2 text-ink font-semibold">Real Estate Beratung & Verkauf – schnell, transparent, persönlich.<br/>Dein Weg zur 1. Kapitalanlage Immobilie</p>
             {/* Socials inside the container */}
             <div className="mt-3 flex justify-center gap-5">
               <a href="https://www.instagram.com/sham_estate?igsh=cWRsM21jeDZpZmxr&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" className="hover:opacity-80" title="Instagram">
@@ -29,11 +28,6 @@ export default function Home() {
                 </svg>
               </a>
             </div>
-            <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
-              <Badge>+3 Jahre Erfahrung</Badge>
-              <Badge>Kundenzufriedenheit</Badge>
-              <Badge>Authentizität</Badge>
-            </div>
           </div>
 
           <div className="mt-6">
@@ -41,11 +35,13 @@ export default function Home() {
               variant="primary"
               href="https://www.sham-estate.com/leistungen"
               label="Kostenloses Erstgespräch buchen"
-              icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>}
+              icon={<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.47-1.14a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z"/></svg>}
             />
             <div className="mt-3 grid gap-3">
-              <LinkButton href="https://www.sham-estate.com" label="Website" icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>} />
-              <LinkButton href="https://www.sham-estate.com/category/all-products" label="E‑Book sichern" icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5V5.5A2.5 2.5 0 0 1 6.5 3H19a2 2 0 0 1 2 2v15H6.5A2.5 2.5 0 0 1 4 17.5"/><path d="M4 5.5A2.5 2.5 0 0 1 6.5 8H21"/></svg>} />
+            <LinkButton href="https://www.sham-estate.com/product-page/free-starter-guide-chancen-und-risiken-bei-immobilien" label="Free Starter Guide - Chancen und Risiken bei Immobilien" icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6.253v13"/><path d="M12 6.253C10.832 5.477 9.546 5 8.25 5H6A2.25 2.25 0 0 0 3.75 7.25v10.5A2.25 2.25 0 0 0 6 20h2.25c1.296 0 2.582.477 3.75 1.253"/><path d="M12 6.253c1.168-.776 2.454-1.253 3.75-1.253H18A2.25 2.25 0 0 1 20.25 7.25v10.5A2.25 2.25 0 0 1 18 20h-2.25c-1.296 0-2.582.477-3.75 1.253"/></svg>} />
+            <LinkButton href="https://www.sham-estate.com/product-page/verhandlungstipps-bei-einem-immobilienkauf" label="Verhandlungstipps für Käufer - So bekommst du den besten Preis" icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6.253v13"/><path d="M12 6.253C10.832 5.477 9.546 5 8.25 5H6A2.25 2.25 0 0 0 3.75 7.25v10.5A2.25 2.25 0 0 0 6 20h2.25c1.296 0 2.582.477 3.75 1.253"/><path d="M12 6.253c1.168-.776 2.454-1.253 3.75-1.253H18A2.25 2.25 0 0 1 20.25 7.25v10.5A2.25 2.25 0 0 1 18 20h-2.25c-1.296 0-2.582.477-3.75 1.253"/></svg>} />
+            <LinkButton href="https://www.sham-estate.com/product-page/immo-checkliste-für-erstkäufer" label="Immo-Checkliste für Erstkäufer (interaktiver Guide)" icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 6.253v13"/><path d="M12 6.253C10.832 5.477 9.546 5 8.25 5H6A2.25 2.25 0 0 0 3.75 7.25v10.5A2.25 2.25 0 0 0 6 20h2.25c1.296 0 2.582.477 3.75 1.253"/><path d="M12 6.253c1.168-.776 2.454-1.253 3.75-1.253H18A2.25 2.25 0 0 1 20.25 7.25v10.5A2.25 2.25 0 0 1 18 20h-2.25c-1.296 0-2.582.477-3.75 1.253"/></svg>} />
+            <LinkButton href="https://www.sham-estate.com" label="Zu meiner Website" icon={<Image src="/images/se-logo.png" alt="Sham Estate" width={36} height={36} className="object-contain" />} />
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ html, body { background: var(--paper); color: var(--ink); font-family: var(--fon
 h1, h2, .font-heading { font-family: var(--font-heading); font-weight: 700; }
 
 /* Utility styles for buttons/cards/badges */
-.btn{ @apply w-full relative inline-flex items-center justify-center text-center font-normal rounded-xl transition focus:outline-none focus:ring-2 focus:ring-brand/30 pl-14 pr-5 py-4 min-h-14 whitespace-nowrap; }
+.btn{ @apply w-full relative inline-flex items-center justify-center text-center font-semibold text-[16px] rounded-xl transition focus:outline-none focus:ring-2 focus:ring-brand/30 pl-16 pr-5 py-4 min-h-16 whitespace-nowrap; }
 .btn-primary{ background: var(--brand); color: var(--brand-contrast); }
 .btn-primary:hover{ filter: brightness(0.95); }
 .btn-outline{ background:#fff; color: var(--brand); border:1px solid var(--brand); }

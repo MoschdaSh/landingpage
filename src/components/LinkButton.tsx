@@ -18,7 +18,7 @@ export function LinkButton({
   return (
     <Link className={cls} href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener" : undefined}>
       {icon && (
-        <span className="absolute left-4 inline-flex items-center justify-center w-7 h-7 rounded-md bg-brand/10 text-brand">
+        <span className="absolute left-5 inline-flex items-center justify-center w-10 h-10 rounded-md bg-white border border-paper-line text-brand overflow-hidden">
           {icon}
         </span>
       )}
